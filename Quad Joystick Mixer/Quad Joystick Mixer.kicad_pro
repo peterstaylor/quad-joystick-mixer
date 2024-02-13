@@ -493,6 +493,10 @@
     [
       "fc10d8f3-a65b-4c3f-8991-d4833c1f4146",
       "Audio Input"
+    ],
+    [
+      "2ccd8f18-0cde-4a72-a705-f74f6a422b9f",
+      "Digital Pot"
     ]
   ],
   "text_variables": {}

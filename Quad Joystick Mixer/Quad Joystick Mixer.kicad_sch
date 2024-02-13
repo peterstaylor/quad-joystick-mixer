@@ -1175,6 +1175,23 @@
     )
   )
 
+  (sheet (at 168.91 120.65) (size 28.575 19.685) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 2ccd8f18-0cde-4a72-a705-f74f6a422b9f)
+    (property "Sheetname" "Digital Pot" (at 168.91 119.9384 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "digitalPot.kicad_sch" (at 168.91 140.9196 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (instances
+      (project "Quad Joystick Mixer"
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d" (page "4"))
+      )
+    )
+  )
+
   (sheet (at 57.15 66.04) (size 33.02 23.495) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
