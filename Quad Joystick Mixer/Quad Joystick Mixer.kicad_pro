@@ -497,6 +497,10 @@
     [
       "2ccd8f18-0cde-4a72-a705-f74f6a422b9f",
       "Channel 1 Digital Pots"
+    ],
+    [
+      "df381643-9329-42d2-97be-3d7265bc1cca",
+      "Audio Output"
     ]
   ],
   "text_variables": {}
