@@ -1654,6 +1654,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "U8") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "U13") (unit 1)
+        )
       )
     )
   )
@@ -1695,6 +1698,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C8") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C67") (unit 1)
+        )
       )
     )
   )
@@ -1720,6 +1726,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R8") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R54") (unit 1)
         )
       )
     )
@@ -1762,6 +1771,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C38") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C57") (unit 1)
+        )
       )
     )
   )
@@ -1786,6 +1798,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR061") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0112") (unit 1)
         )
       )
     )
@@ -1828,6 +1843,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C34") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C64") (unit 1)
+        )
       )
     )
   )
@@ -1863,6 +1881,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "U6") (unit 2)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "U14") (unit 2)
+        )
       )
     )
   )
@@ -1896,6 +1917,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR076") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0129") (unit 1)
         )
       )
     )
@@ -1938,6 +1962,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C39") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C62") (unit 1)
+        )
       )
     )
   )
@@ -1979,6 +2006,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C16") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C61") (unit 1)
+        )
       )
     )
   )
@@ -2003,6 +2033,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR070") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0120") (unit 1)
         )
       )
     )
@@ -2048,6 +2081,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C47") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C65") (unit 1)
+        )
       )
     )
   )
@@ -2083,6 +2119,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "U7") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "U14") (unit 1)
+        )
       )
     )
   )
@@ -2111,6 +2150,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R46") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R57") (unit 1)
         )
       )
     )
@@ -2145,6 +2187,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR054") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0115") (unit 1)
         )
       )
     )
@@ -2187,6 +2232,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C42") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C70") (unit 1)
+        )
       )
     )
   )
@@ -2228,6 +2276,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C35") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C56") (unit 1)
+        )
       )
     )
   )
@@ -2252,6 +2303,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR064") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0103") (unit 1)
         )
       )
     )
@@ -2280,6 +2334,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR058") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0110") (unit 1)
         )
       )
     )
@@ -2315,6 +2372,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR029") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0127") (unit 1)
+        )
       )
     )
   )
@@ -2343,6 +2403,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR060") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0105") (unit 1)
+        )
       )
     )
   )
@@ -2367,6 +2430,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR072") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0123") (unit 1)
         )
       )
     )
@@ -2397,6 +2463,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R30") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R58") (unit 1)
+        )
       )
     )
   )
@@ -2421,6 +2490,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR065") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0102") (unit 1)
         )
       )
     )
@@ -2449,6 +2521,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR089") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0132") (unit 1)
         )
       )
     )
@@ -2479,6 +2554,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R44") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R49") (unit 1)
+        )
       )
     )
   )
@@ -2503,6 +2581,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR067") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0107") (unit 1)
         )
       )
     )
@@ -2530,6 +2611,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R26") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R59") (unit 1)
+        )
       )
     )
   )
@@ -2554,6 +2638,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR075") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0128") (unit 1)
         )
       )
     )
@@ -2584,6 +2671,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R47") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R60") (unit 1)
+        )
       )
     )
   )
@@ -2608,6 +2698,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR073") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0124") (unit 1)
         )
       )
     )
@@ -2638,6 +2731,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R45") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R52") (unit 1)
+        )
       )
     )
   )
@@ -2663,6 +2759,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R23") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R55") (unit 1)
         )
       )
     )
@@ -2708,6 +2807,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C45") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C58") (unit 1)
+        )
       )
     )
   )
@@ -2736,6 +2838,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR077") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0133") (unit 1)
+        )
       )
     )
   )
@@ -2763,6 +2868,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR048") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0131") (unit 1)
         )
       )
     )
@@ -2799,6 +2907,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "U10") (unit 3)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "U18") (unit 3)
+        )
       )
     )
   )
@@ -2824,6 +2935,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R25") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R51") (unit 1)
         )
       )
     )
@@ -2869,6 +2983,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C48") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C66") (unit 1)
+        )
       )
     )
   )
@@ -2896,6 +3013,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR091") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0108") (unit 1)
         )
       )
     )
@@ -2925,6 +3045,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R28") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R50") (unit 1)
         )
       )
     )
@@ -2961,6 +3084,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "U7") (unit 3)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "U16") (unit 3)
+        )
       )
     )
   )
@@ -2987,6 +3113,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R27") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R56") (unit 1)
+        )
       )
     )
   )
@@ -3011,6 +3140,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR069") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0117") (unit 1)
         )
       )
     )
@@ -3046,6 +3178,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR049") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0134") (unit 1)
+        )
       )
     )
   )
@@ -3073,6 +3208,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR074") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0130") (unit 1)
         )
       )
     )
@@ -3102,6 +3240,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR088") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0126") (unit 1)
+        )
       )
     )
   )
@@ -3129,6 +3270,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR079") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0137") (unit 1)
         )
       )
     )
@@ -3165,6 +3309,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "U10") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "U16") (unit 1)
+        )
       )
     )
   )
@@ -3200,6 +3347,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "U6") (unit 3)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "U18") (unit 3)
+        )
       )
     )
   )
@@ -3228,6 +3378,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR055") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0119") (unit 1)
+        )
       )
     )
   )
@@ -3253,6 +3406,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR068") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0111") (unit 1)
+        )
       )
     )
   )
@@ -3277,6 +3433,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR066") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0106") (unit 1)
         )
       )
     )
@@ -3307,6 +3466,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R29") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R53") (unit 1)
+        )
       )
     )
   )
@@ -3335,6 +3497,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R31") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R61") (unit 1)
         )
       )
     )
@@ -3370,6 +3535,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR056") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0121") (unit 1)
+        )
       )
     )
   )
@@ -3397,6 +3565,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR086") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0109") (unit 1)
         )
       )
     )
@@ -3433,6 +3604,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "U7") (unit 2)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "U15") (unit 2)
+        )
       )
     )
   )
@@ -3467,6 +3641,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "U6") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "U14") (unit 1)
         )
       )
     )
@@ -3509,6 +3686,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C9") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C69") (unit 1)
+        )
       )
     )
   )
@@ -3537,6 +3717,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR063") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0116") (unit 1)
+        )
       )
     )
   )
@@ -3561,6 +3744,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR059") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0104") (unit 1)
         )
       )
     )
@@ -3601,6 +3787,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "U9") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "U17") (unit 1)
         )
       )
     )
@@ -3643,6 +3832,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C40") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C63") (unit 1)
+        )
       )
     )
   )
@@ -3667,6 +3859,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR080") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0118") (unit 1)
         )
       )
     )
@@ -3709,6 +3904,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C41") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C68") (unit 1)
+        )
       )
     )
   )
@@ -3736,6 +3934,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR057") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0125") (unit 1)
         )
       )
     )
@@ -3781,6 +3982,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C37") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C55") (unit 1)
+        )
       )
     )
   )
@@ -3825,6 +4029,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C46") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C59") (unit 1)
+        )
       )
     )
   )
@@ -3866,6 +4073,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "C36") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "C60") (unit 1)
+        )
       )
     )
   )
@@ -3893,6 +4103,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR062") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0114") (unit 1)
         )
       )
     )
@@ -3922,6 +4135,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR087") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0113") (unit 1)
+        )
       )
     )
   )
@@ -3949,6 +4165,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR053") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0136") (unit 1)
         )
       )
     )
@@ -3984,6 +4203,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR078") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0135") (unit 1)
+        )
       )
     )
   )
@@ -4011,6 +4233,9 @@
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "#PWR071") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "#PWR0122") (unit 1)
         )
       )
     )
@@ -4047,6 +4272,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "U10") (unit 2)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "U16") (unit 2)
+        )
       )
     )
   )
@@ -4076,6 +4304,9 @@
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "R24") (unit 1)
         )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "R48") (unit 1)
+        )
       )
     )
   )
@@ -4101,6 +4332,9 @@
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/2ccd8f18-0cde-4a72-a705-f74f6a422b9f"
           (reference "D16") (unit 1)
+        )
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
+          (reference "D17") (unit 1)
         )
       )
     )

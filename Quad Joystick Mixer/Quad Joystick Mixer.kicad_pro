@@ -501,6 +501,14 @@
     [
       "df381643-9329-42d2-97be-3d7265bc1cca",
       "Audio Output"
+    ],
+    [
+      "6b806f6d-da33-48ec-b81c-6968195ad9ad",
+      "Channel 2 Digital Pots"
+    ],
+    [
+      "2bfe18f6-ab55-4efd-b5e1-a61472c26ad3",
+      "Joystick"
     ]
   ],
   "text_variables": {}
