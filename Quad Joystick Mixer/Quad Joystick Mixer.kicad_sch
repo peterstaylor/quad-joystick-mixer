@@ -1114,6 +1114,31 @@
     )
   )
 
+  (sheet (at 59.055 127.635) (size 27.305 17.78) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid fc10d8f3-a65b-4c3f-8991-d4833c1f4146)
+    (property "Sheetname" "Audio Input" (at 59.055 126.9234 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "audioInput.kicad_sch" (at 59.055 145.9996 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (pin "Channel2_Input" output (at 86.36 141.605 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 8f7ff2ff-3e1a-4ed2-be3b-fc5d7e95a206)
+    )
+    (pin "Channel1_Input" output (at 86.36 134.62 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 0e1f4e52-f635-40a3-95c7-612c8be850fb)
+    )
+    (instances
+      (project "Quad Joystick Mixer"
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d" (page "3"))
+      )
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
   )
