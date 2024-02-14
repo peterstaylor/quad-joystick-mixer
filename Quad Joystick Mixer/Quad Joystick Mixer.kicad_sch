@@ -1285,6 +1285,14 @@
     (property "Sheetfile" "joystick.kicad_sch" (at 65.405 189.8146 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
+    (pin "CD_control" output (at 93.98 182.88 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 3c350e51-1d26-4c55-acdc-7f6d8cd3c931)
+    )
+    (pin "AB_control" output (at 93.98 177.165 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 48529bc7-7e94-4620-9a70-f4721d3f09e4)
+    )
     (instances
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d" (page "7"))
@@ -1411,6 +1419,23 @@
     (instances
       (project "Quad Joystick Mixer"
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d" (page "6"))
+      )
+    )
+  )
+
+  (sheet (at 286.385 182.245) (size 23.495 14.605) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 70e873e8-c2f7-42de-91d7-3f147d0d972e)
+    (property "Sheetname" "Teensy" (at 286.385 181.5334 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "teensy.kicad_sch" (at 286.385 197.4346 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (instances
+      (project "Quad Joystick Mixer"
+        (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d" (page "8"))
       )
     )
   )

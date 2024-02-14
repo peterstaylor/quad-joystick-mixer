@@ -509,6 +509,10 @@
     [
       "2bfe18f6-ab55-4efd-b5e1-a61472c26ad3",
       "Joystick"
+    ],
+    [
+      "70e873e8-c2f7-42de-91d7-3f147d0d972e",
+      "Teensy"
     ]
   ],
   "text_variables": {}
