@@ -6,7 +6,7 @@
 
   (title_block
     (title "Quadrophonic Joystick Mixer")
-    (date "2024-02-02")
+    (date "2024-02-14")
     (rev "P1")
   )
 
@@ -1423,14 +1423,14 @@
     )
   )
 
-  (sheet (at 286.385 182.245) (size 23.495 14.605) (fields_autoplaced)
+  (sheet (at 201.295 170.815) (size 23.495 14.605) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid 70e873e8-c2f7-42de-91d7-3f147d0d972e)
-    (property "Sheetname" "Teensy" (at 286.385 181.5334 0)
+    (property "Sheetname" "Teensy" (at 201.295 170.1034 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "teensy.kicad_sch" (at 286.385 197.4346 0)
+    (property "Sheetfile" "teensy.kicad_sch" (at 201.295 186.0046 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
     (instances

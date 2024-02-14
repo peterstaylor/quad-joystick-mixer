@@ -2,7 +2,11 @@
 
   (uuid ac1e5761-6b81-4efe-9900-148e570b3ddf)
 
-  (paper "A4")
+  (paper "B")
+
+  (title_block
+    (date "2024-02-14")
+  )
 
   (lib_symbols
     (symbol "Amplifier_Operational:OPA1692xD" (pin_names (offset 0.127)) (in_bom yes) (on_board yes)
