@@ -487,10 +487,6 @@
       ""
     ],
     [
-      "547597e7-7fd4-4461-bc12-6ec4a58ef011",
-      "PSU"
-    ],
-    [
       "fc10d8f3-a65b-4c3f-8991-d4833c1f4146",
       "Audio Input"
     ],
@@ -499,20 +495,24 @@
       "Channel 1 Digital Pots"
     ],
     [
-      "df381643-9329-42d2-97be-3d7265bc1cca",
-      "Audio Output"
-    ],
-    [
       "6b806f6d-da33-48ec-b81c-6968195ad9ad",
       "Channel 2 Digital Pots"
     ],
     [
+      "df381643-9329-42d2-97be-3d7265bc1cca",
+      "Audio Output"
+    ],
+    [
       "2bfe18f6-ab55-4efd-b5e1-a61472c26ad3",
-      "Joystick"
+      "User Interface"
     ],
     [
       "70e873e8-c2f7-42de-91d7-3f147d0d972e",
       "Teensy"
+    ],
+    [
+      "547597e7-7fd4-4461-bc12-6ec4a58ef011",
+      "PSU"
     ]
   ],
   "text_variables": {}

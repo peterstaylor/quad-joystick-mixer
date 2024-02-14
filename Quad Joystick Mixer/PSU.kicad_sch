@@ -5,7 +5,9 @@
   (paper "B")
 
   (title_block
+    (title "Quadrophonic Joystick Mixer")
     (date "2024-02-14")
+    (rev "P1")
   )
 
   (lib_symbols
@@ -1655,6 +1657,10 @@
     (uuid ff1f1b9e-4197-4506-9200-f57df032fe85)
   )
 
+  (text "Power Supplies" (at 170.18 34.29 0)
+    (effects (font (size 3.81 3.81) (thickness 0.508) bold) (justify left bottom))
+    (uuid 59f20b5d-2c2c-44d8-8d7a-ffa10b9cb369)
+  )
   (text "PSRR peaks at 1kHz\nWorse above 20k\nLPF will help" (at 156.21 173.99 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8328e3c6-3ea4-43e1-b60c-76c29874dbe4)

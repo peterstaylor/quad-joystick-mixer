@@ -5,7 +5,9 @@
   (paper "B")
 
   (title_block
+    (title "Quadrophonic Joystick Mixer")
     (date "2024-02-14")
+    (rev "P1")
   )
 
   (lib_symbols
@@ -1570,6 +1572,11 @@
   (wire (pts (xy 232.41 72.39) (xy 239.395 72.39))
     (stroke (width 0) (type default))
     (uuid fff83946-109e-4b5f-9577-47a63c3ba20d)
+  )
+
+  (text "Digital Pots" (at 169.545 32.385 0)
+    (effects (font (size 3.81 3.81) (thickness 0.508) bold) (justify left bottom))
+    (uuid 942457fa-5c22-454e-bc3a-ecbe95ed90a4)
   )
 
   (label "Mix_Input" (at 245.11 78.74 0) (fields_autoplaced)
