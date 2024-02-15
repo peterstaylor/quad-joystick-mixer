@@ -3423,7 +3423,10 @@
     (property "Datasheet" "~" (at 153.67 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "C28323" (at 153.67 184.785 0)
+    (property "MPN" "CL21B105KBFNNNE" (at 153.67 184.785 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "DK PN" "1276-1029-1-ND" (at 153.67 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1a92e9d0-2c43-4ac2-a7e2-a5a5f2e00077))
@@ -3627,8 +3630,8 @@
     (property "MPN" "C17414" (at 169.545 181.61 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4b01fab7-2faf-449e-b3ac-1a5c27002ab2))
-    (pin "2" (uuid a86b95b2-d0d4-4b4c-9338-644953e948db))
+    (pin "1" (uuid 9eaf4118-8a6c-4029-a497-06771edd226d))
+    (pin "2" (uuid c116cf84-7ec5-4d1b-9b48-7510a27588a0))
     (instances
       (project "pt2399 delay"
         (path "/2f9c26f8-4511-4bf4-bd3b-0536a0650344/2b919a13-b4c3-43da-9af1-fe9ebc290c52"
@@ -4151,7 +4154,10 @@
     (property "Datasheet" "~" (at 210.185 184.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "C28323" (at 210.185 184.15 0)
+    (property "MPN" "CL21B105KBFNNNE" (at 210.185 184.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "DK PN" "1276-1029-1-ND" (at 210.185 184.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 47758647-837d-46fd-80ba-4c4b338cb171))
@@ -4660,8 +4666,8 @@
     (property "MPN" "C17414" (at 188.595 196.215 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ee0c926c-324c-4b4f-a8ce-044f43f57599))
-    (pin "2" (uuid dc158f2c-75d9-407d-88ff-96b2500ba92f))
+    (pin "1" (uuid ab51dd80-b2db-45ba-97bb-fbde0f61cbc1))
+    (pin "2" (uuid 7ea99e8b-972c-48d2-9e02-cfe5e10b97bc))
     (instances
       (project "pt2399 delay"
         (path "/2f9c26f8-4511-4bf4-bd3b-0536a0650344/2b919a13-b4c3-43da-9af1-fe9ebc290c52"
