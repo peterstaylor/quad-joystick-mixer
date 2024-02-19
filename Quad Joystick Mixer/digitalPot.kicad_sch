@@ -2411,7 +2411,7 @@
           (reference "U7") (unit 1)
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
-          (reference "U14") (unit 1)
+          (reference "U15") (unit 1)
         )
       )
     )
@@ -3320,7 +3320,7 @@
           (reference "U10") (unit 3)
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
-          (reference "U18") (unit 3)
+          (reference "U16") (unit 3)
         )
       )
     )
@@ -3527,7 +3527,7 @@
           (reference "U7") (unit 3)
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
-          (reference "U16") (unit 3)
+          (reference "U14") (unit 3)
         )
       )
     )
@@ -3845,7 +3845,7 @@
           (reference "U6") (unit 3)
         )
         (path "/e9da4955-68c1-4335-ab8e-8a9cc0328d2d/6b806f6d-da33-48ec-b81c-6968195ad9ad"
-          (reference "U18") (unit 3)
+          (reference "U15") (unit 3)
         )
       )
     )
@@ -4960,7 +4960,7 @@
     (property "Value" "BZT52C4V7-13-F" (at 135.89 73.66 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "BZT52C4V7-13-F" (at 133.35 72.39 0)
+    (property "Footprint" "Diode_SMD:D_SOD-123" (at 133.35 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 133.35 72.39 0)
