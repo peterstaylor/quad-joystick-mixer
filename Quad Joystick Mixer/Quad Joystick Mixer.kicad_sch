@@ -2002,6 +2002,9 @@
     (property "Datasheet" "~" (at 193.675 62.865 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "Source" "NA" (at 193.675 62.865 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 48013a2f-96d6-4f43-99d0-bb2373c6fc65))
     (pin "2" (uuid df98a7a5-4b76-4f91-92ac-42e4d8f3cf00))
     (instances
