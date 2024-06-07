@@ -2,6 +2,34 @@
 This is a README for the quadrophonic joystick mixer design
 
 # Hardware
+## IO Summary: 
+### Digital Interface: 
+We have two I2C interfaces which is more than we techincally need for this board, but is how many we'll need if we go to 8 inputs to to the mixer. Each input requires two digital pots, so that's 16 total digital pots and each i2c inteface can only support up to 8 digital pots
+
+- I2C 0 controls the digital pots for input channel 1
+- I2C 1 controls the digital pots for input channel 2
+
+### Outputs: 
+I included LED indicators to help in development and for general app use as needed: 
+- Red LED Indicator = Teensy Digital Output 2
+- Blue LED Indicator = Teensy Digital Output 3
+
+### Inputs: 
+#### Buttons: 
+There are three buttons that can be used however needed. Three might be more than we actually need, but I had spare I/O
+- Button 1 = Teensy Digital Input 7
+- Button 2 = Teensy Digital Input 8
+- Button 3 = Teensy Digital Input 7
+
+I've also bought out the PROGRAM and POWER pins on the Teensy to buttons. I don't think we need these, but I wasn't sure so I included them in this first revision. 
+
+#### Analaog Inputs: 
+- Encoder channel selection input = Teensy Analog Input 14
+    - I used an analog input for channel selection instead of something digital so I could save I/O on the micro. If this interface is flaky we can switch to digital for the next spin of the board
+- Joystick AB Control Input = Teensy Analog Input 15
+- Joystick CD Control Input = Teensy Analog Input 20 
+
+
 ## V1 to V2 Change Log: 
 - [] Change input gain-setting pots to A50k from A500k
 - [] Add analog filtering and buffering to the input path from the encoder to smoothe out readings
