@@ -54,12 +54,12 @@ char channel1CDaddr = 0x29;
 char channel2ABaddr = 0x28; 
 char channel2CDaddr = 0x29; 
 // "max" volume is lowest value, "min" volume is highest value
-int potABmax = 0;
-int potABmid = 31; // <-- default when joystick is centered?
-int potABmin = 63; // mute setting
-int potCDmax = 64; 
-int potCDmid = 95; // <-- default when joystick is centered? 
-int potCDmin = 127; // mute setting
+int pot0max = 0;
+int pot0mid = 31; // <-- default when joystick is centered?
+int pot0min = 63; // mute setting
+int pot1max = 64; 
+int pot1mid = 95; // <-- default when joystick is centered? 
+int pot1min = 127; // mute setting
 // see datasheet for details on config but: 
 // pot values are stored in NVM
 // zero crossing is enabled
@@ -333,17 +333,122 @@ void joystickCalibration() {
 // try to talk to the digital pots
 void test5() {
   bool proceed = false;
+  int output = 0; 
   Serial.println("Beginning test #5:");
   flash(5);
   initialI2CCheck(); 
   while (!proceed) {
+    toggleOutputs(output); 
+    output++; 
+    if(output == 3){
+      output = 0; 
+    }
     if (digitalRead(button1) == LOW) {
       proceed = true;
-      analogWrite(RED, 0);
-      analogWrite(BLUE, 0);
       Serial.println("Moving on to next test");  //not using calibrations for now, just put in to test
     }
   }
+}
+
+void toggleOutputs(int output) {
+  if (output == 0) {
+    Wire.beginTransmission(channel1ABaddr);
+    Wire.write(pot0max);  // turn on A
+    Wire.write(pot1min);  // mute B
+    Wire.endTransmission();
+    Wire.beginTransmission(channel1CDaddr);
+    Wire.write(pot0min);  // mute C
+    Wire.write(pot1min);  // mute D
+    Wire.endTransmission(); 
+
+    Wire1.beginTransmission(channel2ABaddr); 
+    Wire1.write(pot0max); // turn on A
+    Wire1.write(pot1min);  // mute B
+    Wire1.endTransmission(); 
+    Wire1.beginTransmission(channel2CDaddr); 
+    Wire1.write(pot0min); // mute C
+    Wire1.write(pot1min); // mute D
+    Wire1.endTransmission(); 
+
+  } else if (output == 1) {
+    Wire.beginTransmission(channel1ABaddr);
+    Wire.write(pot0min);  
+    Wire.write(pot1max);  
+    Wire.endTransmission();
+    Wire.beginTransmission(channel1CDaddr);
+    Wire.write(pot0min);  
+    Wire.write(pot1min);  
+    Wire.endTransmission(); 
+
+    Wire1.beginTransmission(channel2ABaddr); 
+    Wire1.write(pot0min); 
+    Wire1.write(pot1max);  
+    Wire1.endTransmission(); 
+    Wire1.beginTransmission(channel2CDaddr); 
+    Wire1.write(pot0min); 
+    Wire1.write(pot1min); 
+    Wire1.endTransmission();
+
+  } else if (output == 2) {
+    Wire.beginTransmission(channel1ABaddr);
+    Wire.write(pot0min);  
+    Wire.write(pot1min);  
+    Wire.endTransmission();
+    Wire.beginTransmission(channel1CDaddr);
+    Wire.write(pot0max);  
+    Wire.write(pot1min);  
+    Wire.endTransmission(); 
+
+    Wire1.beginTransmission(channel2ABaddr); 
+    Wire1.write(pot0min); 
+    Wire1.write(pot1min);  
+    Wire1.endTransmission(); 
+    Wire1.beginTransmission(channel2CDaddr); 
+    Wire1.write(pot0max); 
+    Wire1.write(pot1min); 
+    Wire1.endTransmission();
+
+  } else if (output == 3) {
+    Wire.beginTransmission(channel1ABaddr);
+    Wire.write(pot0min);  
+    Wire.write(pot1min);  
+    Wire.endTransmission();
+    Wire.beginTransmission(channel1CDaddr);
+    Wire.write(pot0min);  
+    Wire.write(pot1max);  
+    Wire.endTransmission(); 
+
+    Wire1.beginTransmission(channel2ABaddr); 
+    Wire1.write(pot0min); 
+    Wire1.write(pot1min);  
+    Wire1.endTransmission(); 
+    Wire1.beginTransmission(channel2CDaddr); 
+    Wire1.write(pot0min); 
+    Wire1.write(pot1max); 
+    Wire1.endTransmission();
+  }
+  delay(500); 
+  return;
+}
+
+void configI2C(){
+  Wire.beginTransmission(channel1ABaddr); 
+  Wire.write(potConfig); 
+  Wire.endTransmission(); 
+
+  Wire.beginTransmission(channel1CDaddr); 
+  Wire.write(potConfig); 
+  Wire.endTransmission(); 
+
+  Wire1.beginTransmission(channel2ABaddr); 
+  Wire1.write(potConfig); 
+  Wire1.endTransmission(); 
+
+  Wire1.beginTransmission(channel2CDaddr); 
+  Wire1.write(potConfig); 
+  Wire1.endTransmission(); 
+
+  return; 
 }
 
 void initialI2CCheck() {
