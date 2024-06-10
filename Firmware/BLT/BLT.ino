@@ -335,6 +335,7 @@ void test5() {
   bool proceed = false;
   int output = 0; 
   Serial.println("Beginning test #5:");
+  Serial.println("Hold down butotn 1 to proceed"); 
   flash(5);
   initialI2CCheck(); 
   while (!proceed) {
@@ -350,8 +351,10 @@ void test5() {
   }
 }
 
+// sends audio out one output at a time, changes the output every half second
 void toggleOutputs(int output) {
   if (output == 0) {
+    Serial.println("Send Audio out A"); 
     Wire.beginTransmission(channel1ABaddr);
     Wire.write(pot0max);  // turn on A
     Wire.write(pot1min);  // mute B
@@ -371,6 +374,7 @@ void toggleOutputs(int output) {
     Wire1.endTransmission(); 
 
   } else if (output == 1) {
+    Serial.println("Send Audio out B"); 
     Wire.beginTransmission(channel1ABaddr);
     Wire.write(pot0min);  
     Wire.write(pot1max);  
@@ -390,6 +394,7 @@ void toggleOutputs(int output) {
     Wire1.endTransmission();
 
   } else if (output == 2) {
+    Serial.println("Send Audio out C"); 
     Wire.beginTransmission(channel1ABaddr);
     Wire.write(pot0min);  
     Wire.write(pot1min);  
@@ -409,6 +414,7 @@ void toggleOutputs(int output) {
     Wire1.endTransmission();
 
   } else if (output == 3) {
+    Serial.println("Send Audio out D"); 
     Wire.beginTransmission(channel1ABaddr);
     Wire.write(pot0min);  
     Wire.write(pot1min);  
@@ -431,6 +437,7 @@ void toggleOutputs(int output) {
   return;
 }
 
+// configures all four digital pots
 void configI2C(){
   Wire.beginTransmission(channel1ABaddr); 
   Wire.write(potConfig); 
@@ -451,6 +458,8 @@ void configI2C(){
   return; 
 }
 
+// checks that pots come up with POR values
+// might need to revisist after i start writing to NVM
 void initialI2CCheck() {
   int testSum = 0; 
 
