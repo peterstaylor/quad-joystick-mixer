@@ -1,3 +1,4 @@
+#include <Wire.h>
 
 // variables
 int RED = 2;
@@ -32,7 +33,6 @@ int channel5Cutoff = 702;
 int channel6Cutoff = 832;
 int channel7Cutoff = 959;
 
-
 // variables for checking button 1
 // used to transition to BLT mode
 bool runBLT = false;
@@ -48,6 +48,12 @@ int lastButton2State = 0;
 int button3State = 0;
 int lastButton3State = 0;
 
+// digital pot variables
+char channel1ABaddr = 0x28; 
+char channel1CDaddr = 0x29; 
+char channel2ABaddr = 0x28; 
+char channel2CDaddr = 0x29; 
+
 // setup function
 void setup() {
   Serial.begin(38400);
@@ -56,6 +62,10 @@ void setup() {
   // red and blue LEDs can be used for status indication in the system
   pinMode(RED, OUTPUT);
   pinMode(BLUE, OUTPUT);
+
+  // start I2C peripherals
+  Wire.begin(); 
+  Wire1.begin();   
 
   Serial.println("Setup complete...");
 }
@@ -156,7 +166,10 @@ void boardLevelTest() {
   //test3();
 
   // Test 4 checks the joystick input
-  test4();
+  //test4();
+
+  // Test 5 checks the I2c comms with the pots
+  test5(); 
 }
 
 // first test just toggles the red and blue LEDs to verify hardware connection
@@ -249,10 +262,10 @@ void test3() {
 
 void test4() {
   bool proceed = false;
-
+  Serial.println("Beginning test #4"); 
   flash(4);
   if (calibrateJoystick) {
-    
+    joystickCalibration(); 
   }
 
   proceed = false;
@@ -264,12 +277,15 @@ void test4() {
     analogWrite(BLUE, CDreading);
     if (digitalRead(button1) == LOW) {
       proceed = true;
+      analogWrite(RED, 0); 
+      analogWrite(BLUE, 0); 
       Serial.println("Moving on to next test");  //not using calibrations for now, just put in to test
     }
   }
 }
 
-void calibrateJoystick() {
+void joystickCalibration() {
+  bool proceed = false; 
   Serial.println("let joystick rest in middle to calibrate center measurement:");
   delay(1000);
   for (int i = 0; i < 10000; i++) {
@@ -300,4 +316,65 @@ void calibrateJoystick() {
       Serial.println("Calibration complete!");  //not using calibrations for now, just put in to test
     }
   }
+}
+
+// try to talk to the digital pots
+void test5() {
+  bool proceed = false;
+  Serial.println("Beginning test #5:");
+  flash(5);
+  initialI2CCheck(); 
+  while (!proceed) {
+    if (digitalRead(button1) == LOW) {
+      proceed = true;
+      analogWrite(RED, 0);
+      analogWrite(BLUE, 0);
+      Serial.println("Moving on to next test");  //not using calibrations for now, just put in to test
+    }
+  }
+}
+
+void initialI2CCheck() {
+  int testSum = 0; 
+
+  Wire.requestFrom(channel1ABaddr, 3);
+  while (Wire.available()) {
+    testSum += int(Wire.read()); 
+  }
+  if(testSum != 325){
+    Serial.println("Channel 1 AB Failed"); 
+    return; 
+  }
+
+  testSum = 0; 
+  Wire.requestFrom(channel1CDaddr, 3);
+  while (Wire.available()) {
+    testSum += int(Wire.read()); 
+  }
+  if(testSum != 325){
+    Serial.println("Channel 1 CD Failed"); 
+    return; 
+  }
+
+  testSum = 0; 
+  Wire1.requestFrom(channel2ABaddr, 3);
+  while (Wire1.available()) {
+    testSum += int(Wire1.read()); 
+  }
+  if(testSum != 325){
+    Serial.println("Channel 2 AB Failed"); 
+    return; 
+  }
+  
+  testSum = 0; 
+  Wire1.requestFrom(channel2CDaddr, 3);
+  while (Wire1.available()) {
+    testSum += int(Wire1.read()); 
+  }
+  if(testSum != 325){
+    Serial.println("Channel 2 CD Failed"); 
+    return; 
+  }
+  Serial.println("All digital pots passed initial check!"); 
+  return; 
 }
