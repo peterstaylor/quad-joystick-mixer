@@ -53,6 +53,16 @@ char channel1ABaddr = 0x28;
 char channel1CDaddr = 0x29; 
 char channel2ABaddr = 0x28; 
 char channel2CDaddr = 0x29; 
+// "max" volume is lowest value, "min" volume is highest value
+char ABmax = 0x00; 
+char ABmin = 0x3F; // mute setting
+char CDmax = 0x40; 
+char CDmin = 0x7F; // mute setting
+// see datasheet for details on config but: 
+// pot values are stored in NVM
+// zero crossing is enabled
+// pot is set for 63 settings
+char potConfig = 0b10000010; 
 
 // setup function
 void setup() {
