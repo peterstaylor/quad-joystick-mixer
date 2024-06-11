@@ -60,11 +60,17 @@ int pot0min = 63; // mute setting
 int pot1max = 64; 
 int pot1mid = 95; // <-- default when joystick is centered? 
 int pot1min = 127; // mute setting
+int aStart = 0; 
+int bStart = 21; 
+int cStart = 42;
+int dStart = 63; 
 // see datasheet for details on config but: 
 // pot values are stored in NVM
 // zero crossing is enabled
 // pot is set for 63 settings
 char potConfig = 0b10000010; 
+
+
 
 // setup function
 void setup() {
@@ -198,10 +204,7 @@ void test1() {
     digitalWrite(RED, LOW);
     digitalWrite(BLUE, HIGH);
     delay(100);
-    if (digitalRead(button1) == LOW) {
-      proceed = true;
-      Serial.println("Proceeding to next test");
-    }
+    proceed = checkToMoveOn(); 
   }
 
   // reset everything after test 1
@@ -228,11 +231,7 @@ void test2() {
       digitalWrite(BLUE, !digitalRead(BLUE));
     }
     lastButton3State = button3State;
-
-    if (digitalRead(button1) == LOW) {
-      proceed = true;
-      Serial.println("Proceeding to next test");
-    }
+    proceed = checkToMoveOn(); 
   }
 
   // reset everything after test 2
@@ -264,20 +263,16 @@ void test3() {
       binaryLED(channelCount);
     }
     lastChannelCount = channelCount;
-
-    if (digitalRead(button1) == LOW) {
-      proceed = true;
-      Serial.println("Proceeding to next test");
-    }
+    proceed = checkToMoveOn(); 
   }
 }
 
 void test4() {
   bool proceed = false;
-  Serial.println("Beginning test #4"); 
+  Serial.println("Beginning test #4");
   flash(4);
   if (calibrateJoystick) {
-    joystickCalibration(); 
+    joystickCalibration();
   }
 
   proceed = false;
@@ -287,17 +282,16 @@ void test4() {
     CDreading = int(float(analogRead(CDcontrol)) / 4.0);
     analogWrite(RED, ABreading);
     analogWrite(BLUE, CDreading);
-    if (digitalRead(button1) == LOW) {
-      proceed = true;
-      analogWrite(RED, 0); 
-      analogWrite(BLUE, 0); 
-      Serial.println("Moving on to next test");  //not using calibrations for now, just put in to test
+    proceed = checkToMoveOn(); 
+    if (proceed) {
+      analogWrite(RED, 0);
+      analogWrite(BLUE, 0);
     }
   }
 }
 
 void joystickCalibration() {
-  bool proceed = false; 
+  bool proceed = false;
   Serial.println("let joystick rest in middle to calibrate center measurement:");
   delay(1000);
   for (int i = 0; i < 10000; i++) {
@@ -323,9 +317,9 @@ void joystickCalibration() {
     } else if (CDreading < CDmin) {
       CDmin = CDreading;
     }
-    if (digitalRead(button1) == LOW) {
-      proceed = true;
-      Serial.println("Calibration complete!");  //not using calibrations for now, just put in to test
+    proceed = checkToMoveOn();
+    if (proceed) {
+      Serial.println("Calibration complete!");
     }
   }
 }
@@ -339,15 +333,59 @@ void test5() {
   flash(5);
   initialI2CCheck(); 
   while (!proceed) {
-    toggleOutputs(output); 
+    //toggleOutputs(output); 
+    slowPan(); 
     output++; 
-    if(output == 3){
+    if(output == 4){
       output = 0; 
     }
-    if (digitalRead(button1) == LOW) {
-      proceed = true;
-      Serial.println("Moving on to next test");  //not using calibrations for now, just put in to test
+    proceed = checkToMoveOn(); 
+  }
+}
+
+void slowPan(){
+  bool proceed = false; 
+
+  while(!proceed){
+    aStart++; 
+    bStart++; 
+    cStart++; 
+    dStart++; 
+    if(aStart > pot0min){
+      aStart = pot0max; 
     }
+    if(bStart > pot1min){
+      bStart = pot1max; 
+    }
+    if(cStart > pot0min){
+      cStart = pot0min; 
+    }
+    if(dStart > pot1min){
+      dStart = pot1min; 
+    }
+
+    Wire.beginTransmission(channel1ABaddr); 
+    Wire.write(aStart); 
+    Wire.write(bStart); 
+    Wire.endTransmission(); 
+
+    Wire.beginTransmission(channel1CDaddr); 
+    Wire.write(cStart); 
+    Wire.write(dStart); 
+    Wire.endTransmission(); 
+
+    Wire1.beginTransmission(channel2ABaddr); 
+    Wire1.write(aStart); 
+    Wire1.write(bStart); 
+    Wire1.endTransmission(); 
+
+    Wire1.beginTransmission(channel2CDaddr); 
+    Wire1.write(cStart); 
+    Wire1.write(dStart); 
+    Wire1.endTransmission(); 
+
+    delay(100);    
+    proceed = checkToMoveOn(); 
   }
 }
 
@@ -468,8 +506,7 @@ void initialI2CCheck() {
     testSum += int(Wire.read()); 
   }
   if(testSum != 325){
-    Serial.println("Channel 1 AB Failed"); 
-    return; 
+    Serial.println("Channel 1 AB Failed");  
   }
 
   testSum = 0; 
@@ -479,7 +516,7 @@ void initialI2CCheck() {
   }
   if(testSum != 325){
     Serial.println("Channel 1 CD Failed"); 
-    return; 
+
   }
 
   testSum = 0; 
@@ -489,7 +526,6 @@ void initialI2CCheck() {
   }
   if(testSum != 325){
     Serial.println("Channel 2 AB Failed"); 
-    return; 
   }
   
   testSum = 0; 
@@ -498,9 +534,17 @@ void initialI2CCheck() {
     testSum += int(Wire1.read()); 
   }
   if(testSum != 325){
-    Serial.println("Channel 2 CD Failed"); 
-    return; 
+    Serial.println("Channel 2 CD Failed");  
   }
   Serial.println("All digital pots passed initial check!"); 
   return; 
+}
+
+bool checkToMoveOn() {
+  bool proceed = false;
+  if (digitalRead(button1) == LOW) {
+    proceed = true;
+    Serial.println("Moving on to next test");
+  }
+  return proceed;
 }
