@@ -68,7 +68,7 @@ int dStart = 63;
 // pot values are stored in NVM
 // zero crossing is enabled
 // pot is set for 63 settings
-char potConfig = 0b10000010; 
+char potConfig = 0b10000110; 
 
 
 
@@ -122,10 +122,10 @@ void flash(int numFlash) {
   for (int i = 0; i < numFlash; i++) {
     digitalWrite(RED, HIGH);
     digitalWrite(BLUE, HIGH);
-    delay(500);
+    delay(250);
     digitalWrite(RED, LOW);
     digitalWrite(BLUE, LOW);
-    delay(500);
+    delay(250);
   }
   return;
 }
@@ -332,9 +332,10 @@ void test5() {
   Serial.println("Hold down butotn 1 to proceed"); 
   flash(5);
   initialI2CCheck(); 
+  configI2C(); 
   while (!proceed) {
-    //toggleOutputs(output); 
-    slowPan(); 
+    toggleOutputs(output); 
+    //slowPan(); 
     output++; 
     if(output == 4){
       output = 0; 
@@ -392,7 +393,7 @@ void slowPan(){
 // sends audio out one output at a time, changes the output every half second
 void toggleOutputs(int output) {
   if (output == 0) {
-    Serial.println("Send Audio out A"); 
+    //Serial.println("Send Audio out A"); 
     Wire.beginTransmission(channel1ABaddr);
     Wire.write(pot0max);  // turn on A
     Wire.write(pot1min);  // mute B
@@ -412,7 +413,7 @@ void toggleOutputs(int output) {
     Wire1.endTransmission(); 
 
   } else if (output == 1) {
-    Serial.println("Send Audio out B"); 
+    //Serial.println("Send Audio out B"); 
     Wire.beginTransmission(channel1ABaddr);
     Wire.write(pot0min);  
     Wire.write(pot1max);  
@@ -432,7 +433,7 @@ void toggleOutputs(int output) {
     Wire1.endTransmission();
 
   } else if (output == 2) {
-    Serial.println("Send Audio out C"); 
+    //Serial.println("Send Audio out C"); 
     Wire.beginTransmission(channel1ABaddr);
     Wire.write(pot0min);  
     Wire.write(pot1min);  
@@ -452,7 +453,7 @@ void toggleOutputs(int output) {
     Wire1.endTransmission();
 
   } else if (output == 3) {
-    Serial.println("Send Audio out D"); 
+    //Serial.println("Send Audio out D"); 
     Wire.beginTransmission(channel1ABaddr);
     Wire.write(pot0min);  
     Wire.write(pot1min);  
@@ -471,7 +472,7 @@ void toggleOutputs(int output) {
     Wire1.write(pot1max); 
     Wire1.endTransmission();
   }
-  delay(500); 
+  delay(1000); 
   return;
 }
 
@@ -480,6 +481,11 @@ void configI2C(){
   Wire.beginTransmission(channel1ABaddr); 
   Wire.write(potConfig); 
   Wire.endTransmission(); 
+
+  Wire.requestFrom(channel1ABaddr, 3);
+  while (Wire.available()) {
+    Serial.println(Wire.read()); 
+  }
 
   Wire.beginTransmission(channel1CDaddr); 
   Wire.write(potConfig); 
@@ -503,7 +509,8 @@ void initialI2CCheck() {
 
   Wire.requestFrom(channel1ABaddr, 3);
   while (Wire.available()) {
-    testSum += int(Wire.read()); 
+    Serial.println(Wire.read()); 
+    //testSum += int(Wire.read()); 
   }
   if(testSum != 325){
     Serial.println("Channel 1 AB Failed");  
