@@ -93,29 +93,42 @@ void loop() {
   if (runBLT) {
     boardLevelTest();
     runBLT = false;
+    delay(1000);
   } else {
     checkBLTtransition();
     // app code goes here
   }
 }
 
+void boardLevelTest() {
+  Serial.println("Beginning test procedure...");
+  // Test 1, basic blink pattern on two LEDs
+  test1();
+
+  // Test 2, check buttons 2 and 3
+  test2();
+
+  // Test 3, checks the encoder
+  test3();
+
+  // Test 4 checks the joystick input
+  test4();
+
+  // Test 5 checks the I2c comms with the pots
+  test5(); 
+}
+
 // implmenets a timeout on button 1
 // if you hold down button 1 long enough, the system will switch to BLT mode
 void checkBLTtransition() {
   button1State = digitalRead(button1);
-  if (button1State != lastButton1State) {
-    if (button1State == 0) {
-      startBLTdet = millis();
-    } else {
-      endBLTdet = millis();
-      if (endBLTdet - startBLTdet > bltOnTimeout) {
-        runBLT = true;
-      }
-      endBLTdet = 0;
-      startBLTdet = 0;
+  if(button1State == 1){
+    startBLTdet = millis(); 
+  } else{
+    if(millis() - startBLTdet > bltOnTimeout){
+      runBLT = true; 
     }
   }
-  lastButton1State = button1State;
 }
 
 void flash(int numFlash) {
@@ -172,23 +185,7 @@ void binaryLED(int count) {
   return;
 }
 
-void boardLevelTest() {
-  Serial.println("Beginning test procedure...");
-  // Test 1, basic blink pattern on two LEDs
-  //test1();
 
-  // Test 2, check buttons 2 and 3
-  //test2();
-
-  // Test 3, checks the encoder
-  //test3();
-
-  // Test 4 checks the joystick input
-  //test4();
-
-  // Test 5 checks the I2c comms with the pots
-  test5(); 
-}
 
 // first test just toggles the red and blue LEDs to verify hardware connection
 void test1() {
@@ -269,7 +266,8 @@ void test3() {
 
 void test4() {
   bool proceed = false;
-  Serial.println("Beginning test #4");
+  Serial.println("Beginning test 4:");
+  Serial.println("Move joystick around to control brightness of LEDs"); 
   flash(4);
   if (calibrateJoystick) {
     joystickCalibration();
@@ -283,24 +281,22 @@ void test4() {
     analogWrite(RED, ABreading);
     analogWrite(BLUE, CDreading);
     proceed = checkToMoveOn(); 
-    if (proceed) {
-      analogWrite(RED, 0);
-      analogWrite(BLUE, 0);
+    if (proceed) { 
+      analogWrite(RED,0); 
+      analogWrite(BLUE,0); 
     }
   }
 }
 
 void joystickCalibration() {
   bool proceed = false;
-  Serial.println("let joystick rest in middle to calibrate center measurement:");
+  Serial.println("Let joystick rest in middle to calibrate center measurement:");
   delay(1000);
-  for (int i = 0; i < 10000; i++) {
+  for (int i = 0; i < 20000; i++) {
     ABmid = (ABmid + analogRead(ABcontrol)) / 2;
     CDmid = (CDmid + analogRead(CDcontrol)) / 2;
   }
-  Serial.println(ABmid);
-  Serial.println(CDmid);
-  Serial.println("middle calibrated");
+  Serial.println("Middle calibrated");
   Serial.println("now swing joystick in full circle for a few seconds");
   Serial.println("press button 1 to proceed after swinging joystick around");
   while (!proceed) {
@@ -329,71 +325,31 @@ void test5() {
   bool proceed = false;
   int output = 0; 
   Serial.println("Beginning test #5:");
-  Serial.println("Hold down butotn 1 to proceed"); 
-  flash(5);
+  Serial.println("Hold down button 1 to proceed"); 
+  configI2C();
   initialI2CCheck(); 
-  configI2C(); 
   while (!proceed) {
-    toggleOutputs(output); 
-    //slowPan(); 
+    toggleOutputs(output);  
     output++; 
     if(output == 4){
       output = 0; 
     }
     proceed = checkToMoveOn(); 
-  }
-}
-
-void slowPan(){
-  bool proceed = false; 
-
-  while(!proceed){
-    aStart++; 
-    bStart++; 
-    cStart++; 
-    dStart++; 
-    if(aStart > pot0min){
-      aStart = pot0max; 
+    if(proceed){
+      Serial.println("Test complete!"); 
+      analogWrite(RED,0); 
+      analogWrite(BLUE,0); 
+      delay(1000); 
     }
-    if(bStart > pot1min){
-      bStart = pot1max; 
-    }
-    if(cStart > pot0min){
-      cStart = pot0min; 
-    }
-    if(dStart > pot1min){
-      dStart = pot1min; 
-    }
-
-    Wire.beginTransmission(channel1ABaddr); 
-    Wire.write(aStart); 
-    Wire.write(bStart); 
-    Wire.endTransmission(); 
-
-    Wire.beginTransmission(channel1CDaddr); 
-    Wire.write(cStart); 
-    Wire.write(dStart); 
-    Wire.endTransmission(); 
-
-    Wire1.beginTransmission(channel2ABaddr); 
-    Wire1.write(aStart); 
-    Wire1.write(bStart); 
-    Wire1.endTransmission(); 
-
-    Wire1.beginTransmission(channel2CDaddr); 
-    Wire1.write(cStart); 
-    Wire1.write(dStart); 
-    Wire1.endTransmission(); 
-
-    delay(100);    
-    proceed = checkToMoveOn(); 
   }
 }
 
 // sends audio out one output at a time, changes the output every half second
 void toggleOutputs(int output) {
   if (output == 0) {
-    //Serial.println("Send Audio out A"); 
+    Serial.println("Send Audio out A"); 
+    analogWrite(RED,0); 
+    analogWrite(BLUE,0);
     Wire.beginTransmission(channel1ABaddr);
     Wire.write(pot0max);  // turn on A
     Wire.write(pot1min);  // mute B
@@ -414,6 +370,8 @@ void toggleOutputs(int output) {
 
   } else if (output == 1) {
     //Serial.println("Send Audio out B"); 
+    analogWrite(RED,0); 
+    analogWrite(BLUE,255);
     Wire.beginTransmission(channel1ABaddr);
     Wire.write(pot0min);  
     Wire.write(pot1max);  
@@ -434,6 +392,8 @@ void toggleOutputs(int output) {
 
   } else if (output == 2) {
     //Serial.println("Send Audio out C"); 
+    analogWrite(RED,255); 
+    analogWrite(BLUE,0);
     Wire.beginTransmission(channel1ABaddr);
     Wire.write(pot0min);  
     Wire.write(pot1min);  
@@ -454,6 +414,8 @@ void toggleOutputs(int output) {
 
   } else if (output == 3) {
     //Serial.println("Send Audio out D"); 
+    analogWrite(RED,255); 
+    analogWrite(BLUE,255);
     Wire.beginTransmission(channel1ABaddr);
     Wire.write(pot0min);  
     Wire.write(pot1min);  
@@ -480,23 +442,26 @@ void toggleOutputs(int output) {
 void configI2C(){
   Wire.beginTransmission(channel1ABaddr); 
   Wire.write(potConfig); 
+  Wire.write(pot0min); 
+  Wire.write(pot1min); 
   Wire.endTransmission(); 
-
-  Wire.requestFrom(channel1ABaddr, 3);
-  while (Wire.available()) {
-    Serial.println(Wire.read()); 
-  }
 
   Wire.beginTransmission(channel1CDaddr); 
   Wire.write(potConfig); 
+  Wire.write(pot0min); 
+  Wire.write(pot1min);
   Wire.endTransmission(); 
 
   Wire1.beginTransmission(channel2ABaddr); 
   Wire1.write(potConfig); 
+  Wire1.write(pot0min); 
+  Wire1.write(pot1min); 
   Wire1.endTransmission(); 
 
   Wire1.beginTransmission(channel2CDaddr); 
   Wire1.write(potConfig); 
+  Wire1.write(pot0min); 
+  Wire1.write(pot1min); 
   Wire1.endTransmission(); 
 
   return; 
@@ -506,14 +471,14 @@ void configI2C(){
 // might need to revisist after i start writing to NVM
 void initialI2CCheck() {
   int testSum = 0; 
-
+  bool testPass = true; 
   Wire.requestFrom(channel1ABaddr, 3);
   while (Wire.available()) {
-    Serial.println(Wire.read()); 
-    //testSum += int(Wire.read()); 
-  }
-  if(testSum != 325){
-    Serial.println("Channel 1 AB Failed");  
+    testSum += int(Wire.read()); 
+  } 
+  if(testSum != 324){
+    Serial.println("Channel 1 AB Failed");
+    testPass = false;   
   }
 
   testSum = 0; 
@@ -521,9 +486,9 @@ void initialI2CCheck() {
   while (Wire.available()) {
     testSum += int(Wire.read()); 
   }
-  if(testSum != 325){
+  if(testSum != 324){
     Serial.println("Channel 1 CD Failed"); 
-
+    testPass = false;  
   }
 
   testSum = 0; 
@@ -531,19 +496,27 @@ void initialI2CCheck() {
   while (Wire1.available()) {
     testSum += int(Wire1.read()); 
   }
-  if(testSum != 325){
+  if(testSum != 324){
     Serial.println("Channel 2 AB Failed"); 
+    testPass = false;  
   }
   
   testSum = 0; 
   Wire1.requestFrom(channel2CDaddr, 3);
   while (Wire1.available()) {
     testSum += int(Wire1.read()); 
+  } 
+  if(testSum != 324){
+    Serial.println("Channel 2 CD Failed"); 
+    testPass = false;   
   }
-  if(testSum != 325){
-    Serial.println("Channel 2 CD Failed");  
+  
+  if(testPass){
+      Serial.println("All digital pots passed initial check!"); 
+  } else{
+    Serial.println("Digital pots failed"); 
   }
-  Serial.println("All digital pots passed initial check!"); 
+  
   return; 
 }
 
