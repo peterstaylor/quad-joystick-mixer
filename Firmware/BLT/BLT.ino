@@ -284,6 +284,10 @@ void test4() {
     if (proceed) { 
       analogWrite(RED,0); 
       analogWrite(BLUE,0); 
+      pinMode(RED, INPUT);
+      pinMode(BLUE, INPUT);
+      pinMode(RED, OUTPUT);
+      pinMode(BLUE, OUTPUT);
     }
   }
 }
@@ -326,6 +330,7 @@ void test5() {
   int output = 0; 
   Serial.println("Beginning test #5:");
   Serial.println("Hold down button 1 to proceed"); 
+  flash(5); 
   configI2C();
   initialI2CCheck(); 
   while (!proceed) {
