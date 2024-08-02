@@ -4,7 +4,7 @@ This is a README for the quadrophonic joystick mixer design
 # Hardware
 ## IO Summary: 
 ### Digital Interface: 
-We have two I2C interfaces which is more than we techincally need for this board, but is how many we'll need if we go to 8 inputs to to the mixer. Each input requires two digital pots, so that's 16 total digital pots and each i2c inteface can only support up to 8 digital pots
+We have two I2C interfaces which is more than we techincally need for this board, but is how many we'll need if we go to 8 inputs to to the mixer. Each input requires two digital pots, so that's 16 total digital pots and each i2c interface can only support up to 8 digital pots
 
 - I2C 0 controls the digital pots for input channel 1
 - I2C 1 controls the digital pots for input channel 2
