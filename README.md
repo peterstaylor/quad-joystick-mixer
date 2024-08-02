@@ -31,8 +31,12 @@ I've also bought out the PROGRAM and POWER pins on the Teensy to buttons. I don'
 
 
 ## V1 to V2 Change Log: 
-- [] Change input gain-setting pots to A50k from A500k
+- [] Use attenuator as front-end gain control instead of amplifier feedback gain
+- [] Add additional filtering to VCC and VDD rails 
+- [] upgrade to lower noise op-amps
+- [] don't route the dang i2c nets over a cut in the ground plane!!! 
 - [] Add analog filtering and buffering to the input path from the encoder to smoothe out readings
+- [] revisit output gain and mixing
 - [] Add six more analog inputs for a total of 8 inputs 
 - [] Perform electromechanical integration work once the design is working
 
